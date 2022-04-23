@@ -25,8 +25,6 @@ returnType：返回值类型
 */
 
 
-
-
 type User struct {
 	name string
 }
