@@ -24,6 +24,7 @@ type Computers struct {
 	name string
 }
 
+//一个类型实现多个接口
 func (phone Phone) playMusic() {
 	fmt.Println(phone.name,"playMusic...")
 }
@@ -32,6 +33,7 @@ func (phone Phone) playVideo() {
 	fmt.Println(phone.name,"playVideo...")
 }
 
+//一个接口被多个类型实现
 func (com Computers) playMusic() {
 	fmt.Println(com.name, "playMusic...")
 }
@@ -47,7 +49,4 @@ func main() {
 		name : "MacBookPro",
 	}
 	com.playMusic()
-
-
-	
 }
