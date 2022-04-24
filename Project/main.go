@@ -2,7 +2,9 @@ package main
 
 import "fmt"
 
+import "Project/service"
+
 func main() {
-	
-	fmt.Println("hello world")
+	fmt.Println("Hello World!")
+	service.TestUser()
 }

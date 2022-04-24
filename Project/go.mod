@@ -1,3 +1,3 @@
-module GoPro/Project
+module Project
 
 go 1.18
