@@ -50,7 +50,7 @@ func (mobile Mobile) writer() {
 }
 
 
-func main() {
+func main3() {
 	//实例化结构体
 	com := Computer {
 		name: "Apple",

@@ -1,6 +1,5 @@
 package main
 
-import "fmt"
 
 //Go 包
 /* 
@@ -22,6 +21,6 @@ go list -m all -json  //查看所有模块的依赖关系，并且输出json格�
 
 */
 
-func main() {
+func main11() {
 	
 }

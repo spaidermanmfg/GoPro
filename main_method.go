@@ -55,7 +55,7 @@ func (customer Customer) login(name string, pwd string) string {
 }
 	
 
-func main() {
+func main1() {
 	tmp := User{
 		name: "mark",
 	}

@@ -42,7 +42,7 @@ func (user *Users) showUser4() {
 	fmt.Printf("user4: %v\n", *user)
 }
 
-func main() {
+func main2() {
 	//值类型
 	p1 := Users {
 		name: "mark",

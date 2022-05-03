@@ -31,7 +31,7 @@ func (bird Bird) swimmer() {
 }
 	
 
-func main() {
+func main7() {
 	var bird flySwimmer
 	bird = Bird {
 		name : "麻雀",

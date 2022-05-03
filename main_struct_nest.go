@@ -16,7 +16,7 @@ type Persons struct {
 	dog Dog
 }
 
-func main() {
+func main13() {
 	//初始化dog
 	var dog Dog
 	dog = Dog{

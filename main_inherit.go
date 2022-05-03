@@ -30,7 +30,7 @@ type Dargon struct {
 	color string
 }
 
-func main() {
+func main8() {
 	sheep := Sheep {
 		ani : Animal {
 			name : "咩咩",

@@ -31,7 +31,7 @@ func (cat *Cat) eat(food string) string {
 
 
 
-func main() {
+func main5() {
 	cat := Cat{
 		name : "kitty",
 	}

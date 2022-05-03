@@ -38,7 +38,7 @@ func (com Computers) playMusic() {
 	fmt.Println(com.name, "playMusic...")
 }
 
-func main() {
+func main4() {
 	phone := Phone{
 		name : "iPhone",
 	}

@@ -44,7 +44,7 @@ func (person PERSON) care(pet PET) {
 	pet.run()
 }
 
-func main() {
+func main6() {
 	dog := DOG {
 		name : "旺财",
 	}
