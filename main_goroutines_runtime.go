@@ -10,7 +10,7 @@ runtime包
 runtime.Goexit()//退出当前协程
 runtime.Gosched()//让出CPU时间片
 runtime.NumCPU()//获取CPU核心数
-
+runtime.GOMAXPROCS(1)//设置最大CPU数
 */
 
 func showInfos(msg string) {
@@ -23,7 +23,7 @@ func showInfos(msg string) {
 }
 
 
-func main() {
+func main44() {
 	go showInfos("Globel WAR")
 	fmt.Println("runtime.NumCPU(): ", runtime.NumCPU())//获取CPU核心数
 	runtime.GOMAXPROCS(1)//设置最大CPU数

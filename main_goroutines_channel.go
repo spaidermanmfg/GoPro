@@ -19,7 +19,7 @@ var chanName chan Type = make(chan Type, capacity)   //有缓存管道，capacit
 */
 
 //创建一个int类型管道
-var values = make(chan int)
+/* var values = make(chan int)
 
 func send() {
 	rand.Seed(time.Now().UnixNano())
@@ -37,3 +37,4 @@ func main10() {
 	fmt.Printf("receive: %v\n", value)
 	fmt.Println("end...")
 }
+ */
