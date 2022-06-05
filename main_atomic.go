@@ -5,7 +5,16 @@ import "time"
 import "sync/atomic"
 
 /* 
-原子变量
+原子操作 atomic
+atomic提供的原子操作能确保任一时刻只有一个goroutine对变量进行操作，避免锁操作
+
+atomic常见操作：
+	增减
+	载入 
+	比较并交换cas
+	交换
+	存储
+
 
 
 */
@@ -36,8 +45,10 @@ func main() {
 	fmt.Println(i)
 	} 
 */
+
 var i int32 = 100
 
+//增减
 func ADD(){
 	atomic.AddInt32(&i, 1)
 }
@@ -45,6 +56,8 @@ func ADD(){
 func SUB(){
 	atomic.AddInt32(&i, -1)
 }
+
+
 
 
 
@@ -56,6 +69,19 @@ func main() {
 
 	time.Sleep(time.Second * 2)	
 	fmt.Println(i)
+
+	//载入,读操作
+	atomic.LoadInt32(&i)
+	fmt.Printf("I: %v\n", i)
+
+	//存储，写操作
+	atomic.StoreInt32(&i, 200)
+	fmt.Println("store:",i)
+
+	//比较交换，返回bool值
+	b := atomic.CompareAndSwapInt32(&i, 100, 200)//与旧值进行比较，如果被修改则停止交换s
+	fmt.Printf("b: %v\ni: %v \n", b, i)
+
 } 
 
 
