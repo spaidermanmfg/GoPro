@@ -1,4 +1,5 @@
 package main
+
 //map
 
 import "fmt"
@@ -8,16 +9,16 @@ func map1() {
 	//var mapName map[keyType]valueType
 	//使用make函数声明map
 	//var mapName = make(map[keyType]valueType])
-	var info map[string]string//声明
-	info = make(map[string]string)//初始化
+	var info map[string]string     //声明
+	info = make(map[string]string) //初始化
 	fmt.Printf("%T\n", info)
 	fmt.Println(info)
 
 	//直接初始化
 	var john = map[string]string{
-		"name":"john",
-		"age":"25",
-		"job":"skate",
+		"name": "john",
+		"age":  "25",
+		"job":  "skate",
 	}
 	fmt.Printf("john: %v\n", john)
 
@@ -60,7 +61,7 @@ func map3() {
 }
 
 func map4() {
-	//ergodic map elements using range loop 
+	//ergodic map elements using range loop
 	var maps = make(map[string]string)
 	maps["name"] = "kimi"
 	maps["age"] = "41"
@@ -76,5 +77,5 @@ func mainpp() {
 	map1()
 	map2()
 	map3()
-	map4()	
+	map4()
 }

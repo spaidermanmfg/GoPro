@@ -18,31 +18,29 @@ package main
 */
 
 import (
-	"fmt"
 	"database/sql"
+	"fmt"
 	"time"
 
 	_ "github.com/go-sql-driver/mysql"
 )
 
 type User struct {
-	id int
+	id       int
 	username string
 	password string
 }
 
-
 //定义全局变量db
 var db *sql.DB
-
 
 //插入数据
 func insertData(username string, password string) {
 	sqlStr := "insert into dbname (name, age) values (?, ?)"
-	r , err := db.Exec(sqlStr, username, password)
+	r, err := db.Exec(sqlStr, username, password)
 	if err != nil {
 		panic(err)
-	}else{
+	} else {
 		fmt.Println("插入成功")
 	}
 }
@@ -55,7 +53,7 @@ func queryRowDate() {
 	err := db.QueryRow(sqlStr, 1).Scan(&user.id, &user.username, &user.password)
 	if err != nil {
 		fmt.Println("查询失败")
-	}else{
+	} else {
 		fmt.Println("查询成功")
 	}
 }
@@ -68,7 +66,7 @@ func queryManyDate() {
 	defer r.Close()
 	if err != nil {
 		fmt.Println("查询失败")
-	}else{
+	} else {
 		for r.Next() {
 			r.Scan(&user.id, &user.username, &user.password)
 			fmt.Println(user)
@@ -83,13 +81,12 @@ func updateData() {
 	res, err := db.Exec(sqlStr, "小明", 1)
 	if err != nil {
 		fmt.Println("更新失败")
-	}else {
+	} else {
 		fmt.Println("更新成功")
-		i , _ := res.RowsAffected()
-		fmt.Println(i)//更新的行数
+		i, _ := res.RowsAffected()
+		fmt.Println(i) //更新的行数
 	}
 }
-
 
 //删除数据
 func deleteData() {
@@ -97,10 +94,10 @@ func deleteData() {
 	res, err := db.Exec(sqlStr, 1)
 	if err != nil {
 		fmt.Println("删除失败")
-	}else {
+	} else {
 		fmt.Println("删除成功")
-		i , _ := res.RowsAffected()
-		fmt.Println(i)//删除的行数
+		i, _ := res.RowsAffected()
+		fmt.Println(i) //删除的行数
 	}
 }
 
@@ -121,7 +118,6 @@ func initDB() (err error) {
 	return nil
 }
 
-
 func main() {
 	// //open函数并不创建数据库连接，只是验证参数格式是否正确，使用Ping函数创建数据库连接
 	// db, err := sql.Open("mysql", "roor:12345678@/dbname")
@@ -136,8 +132,8 @@ func main() {
 	err := initDB()
 	if err != nil {
 		fmt.Println("初始化数据库失败")
-	}else{
+	} else {
 		fmt.Println("初始化数据库成功")
 	}
-	
+
 }

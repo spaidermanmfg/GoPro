@@ -1,8 +1,9 @@
 package main
+
 import "fmt"
 
 //接口和类型的关系
-/* 
+/*
 一个类型可以实现多个接口
 一个接口可以被多个类型实现（多态）
 
@@ -26,11 +27,11 @@ type Computers struct {
 
 //一个类型实现多个接口
 func (phone Phone) playMusic() {
-	fmt.Println(phone.name,"playMusic...")
+	fmt.Println(phone.name, "playMusic...")
 }
 
 func (phone Phone) playVideo() {
-	fmt.Println(phone.name,"playVideo...")
+	fmt.Println(phone.name, "playVideo...")
 }
 
 //一个接口被多个类型实现
@@ -40,13 +41,13 @@ func (com Computers) playMusic() {
 
 func main4() {
 	phone := Phone{
-		name : "iPhone",
+		name: "iPhone",
 	}
 	phone.playMusic()
 	phone.playVideo()
 
-	com := Computers {
-		name : "MacBookPro",
+	com := Computers{
+		name: "MacBookPro",
 	}
 	com.playMusic()
 }

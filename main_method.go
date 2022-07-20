@@ -3,7 +3,7 @@ package main
 
 import "fmt"
 
-/* 
+/*
 方法就是含有接收者的函数
 语法格式：
 func (receiverType receiverVariable) functionName(parameterType) returnType {
@@ -24,7 +24,6 @@ returnType：返回值类型
 3.按照接收者的指针调用方法
 */
 
-
 type User struct {
 	name string
 }
@@ -41,19 +40,18 @@ func (user User) sleep() {
 
 type Customer struct {
 	name string
-	pwd string
+	pwd  string
 }
 
 func (customer Customer) login(name string, pwd string) string {
 	fmt.Printf("%v, %v\n", customer.name, customer.pwd)
 	if name == customer.name && pwd == customer.pwd {
 		return "login success..."
-	}else{
+	} else {
 		return "login failed..."
 	}
 
 }
-	
 
 func main1() {
 	tmp := User{
@@ -62,10 +60,9 @@ func main1() {
 	tmp.eat()
 	tmp.sleep()
 
-
 	cus := Customer{
 		name: "fard",
-		pwd: "6767",
+		pwd:  "6767",
 	}
 	re := cus.login("fard", "6767")
 	fmt.Printf("%v\n", re)

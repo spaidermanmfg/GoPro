@@ -6,7 +6,7 @@ import "fmt"
 
 type Human struct {
 	name string
-	age int
+	age  int
 }
 
 func NewHuman(name string, age int) (*Human, error) {
@@ -16,14 +16,14 @@ func NewHuman(name string, age int) (*Human, error) {
 	if age <= 0 {
 		return nil, fmt.Errorf("age is %d", age)
 	}
-	return &Human{name : name, age : age,}, nil
+	return &Human{name: name, age: age}, nil
 }
 
 func main() {
 	res, err := NewHuman("", 12)
 	if err != nil {
 		fmt.Println(err)
-	}else {
+	} else {
 		fmt.Println(*res)
 	}
 }

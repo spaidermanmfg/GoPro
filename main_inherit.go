@@ -3,13 +3,13 @@ package main
 import "fmt"
 
 //Go 继承
-/* 
+/*
 通过嵌套结构体来实现
 */
 
 type Animal struct {
 	name string
-	age int
+	age  int
 }
 
 func (ani Animal) eat() {
@@ -21,30 +21,30 @@ func (ani Animal) sleep() {
 }
 
 type Sheep struct {
-	ani Animal //可以看作继承
+	ani   Animal //可以看作继承
 	color string
 }
 
 type Dargon struct {
-	ani Animal
+	ani   Animal
 	color string
 }
 
 func main8() {
-	sheep := Sheep {
-		ani : Animal {
-			name : "咩咩",
-			age : 3,
+	sheep := Sheep{
+		ani: Animal{
+			name: "咩咩",
+			age:  3,
 		},
-		color : "white",
+		color: "white",
 	}
 
-	dargon := Dargon {
-		ani : Animal {
-			name : "long",
-			age : 55,
+	dargon := Dargon{
+		ani: Animal{
+			name: "long",
+			age:  55,
 		},
-		color : "blue",
+		color: "blue",
 	}
 
 	sheep.ani.eat()
@@ -59,5 +59,4 @@ func main8() {
 	fmt.Printf("age: %v\n", dargon.ani.age)
 	fmt.Printf("name: %v\n", dargon.ani.name)
 
-	
 }

@@ -1,4 +1,5 @@
 package main
+
 //Go格式化输出
 import (
 	"fmt"
@@ -7,9 +8,10 @@ import (
 type Person struct {
 	Name string
 }
+
 func mainm() {
 	/*
-	Printf: Print Format
+		Printf: Print Format
 	*/
 	name := Person{Name: "Mark"}
 	//%v var 变量
@@ -28,14 +30,14 @@ func mainm() {
 	fmt.Printf("%d\n", i)
 	//%b binary 二进制
 	fmt.Printf("%b\n", i)
-	//%o octal 八进制 
+	//%o octal 八进制
 	fmt.Printf("%o\n", i)
 	//%x hex 十六进制
-	fmt.Printf("%x\n", i)//小写
-	fmt.Printf("%X\n", i)//大写
+	fmt.Printf("%x\n", i) //小写
+	fmt.Printf("%X\n", i) //大写
 	//符号格式
 	i = 91
-	fmt.Printf("%c\n", i)//[
+	fmt.Printf("%c\n", i) //[
 	//%s string
 	fmt.Printf("%s\n", name.Name)
 	//%p pointer 指针

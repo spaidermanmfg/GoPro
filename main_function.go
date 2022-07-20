@@ -2,8 +2,7 @@ package main
 
 import "fmt"
 
-
-/* 
+/*
 function
 function contains a function name, parameters, return value and body
 1. 函数不允许重载，不能重名
@@ -27,8 +26,8 @@ func sum(a int, b int) (c int) {
 func comp(a int, b int) (max int) {
 	//The comparison of function
 	if a > b {
-		max = a 
-	}else {
+		max = a
+	} else {
 		max = b
 	}
 	return max
@@ -42,7 +41,6 @@ func return_func() (name string, age int, hack bool) {
 	hack = false
 	return //return name, age, hack等价于return
 }
-
 
 //parameter
 //copy
@@ -84,15 +82,13 @@ func back_func(s string) func(int, int) int {
 	}
 }
 
-
 //变长参数
-func change_param(name string, yep bool, num int, args...int) {
+func change_param(name string, yep bool, num int, args ...int) {
 	fmt.Printf("name: %v, yep: %v, num: %v, args: %v\n", name, yep, num, args)
 	for _, v := range args {
 		fmt.Printf("%v\t", v)
 	}
 }
-
 
 func mainrr() {
 	//call function
@@ -110,12 +106,12 @@ func mainrr() {
 	fmt.Printf("a: %v\n", a)
 
 	//切片、数组、map等类型的参数会被修改值
-	b := []int{1,2,3,4}
-	param2(b)//值被修改
+	b := []int{1, 2, 3, 4}
+	param2(b) //值被修改
 	fmt.Printf("b: %v\n", b)
 
 	//变长参数
-	change_param("mike", true, 88, 1,2,3,4,5,6,7,8,9,99)
+	change_param("mike", true, 88, 1, 2, 3, 4, 5, 6, 7, 8, 9, 99)
 
 	//函数作为参数传递
 	trans_func(6, 7, sum2)
@@ -128,6 +124,5 @@ func mainrr() {
 	fc = back_func("-")
 	re = fc(6, 7)
 	fmt.Printf("%v\n", re)
-
 
 }

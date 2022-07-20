@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"sync"
 )
+
 /*
 等待组
 */
@@ -14,7 +15,6 @@ func showInt(i int) {
 	defer wp.Done()
 	fmt.Printf("i = %v\n", i)
 }
-
 
 func main22() {
 	for i := 0; i < 10; i++ {

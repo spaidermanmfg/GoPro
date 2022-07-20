@@ -29,12 +29,11 @@ func (bird Bird) swimmer() {
 	fmt.Println(bird.name, "实现swimmer方法...")
 
 }
-	
 
 func main7() {
 	var bird flySwimmer
-	bird = Bird {
-		name : "麻雀",
+	bird = Bird{
+		name: "麻雀",
 	}
 	bird.fly()
 	bird.swimmer()

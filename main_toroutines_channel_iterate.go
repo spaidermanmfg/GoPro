@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-/* 
+/*
 channel的遍历，通过for循环和for range
 
 
@@ -36,13 +36,13 @@ func main() {
 	for v := range y {
 		fmt.Println(v)
 	}
- */
+	*/
 	//3
 	for {
 		v, ok := <-y
 		if ok {
 			fmt.Println(v)
-		}else{
+		} else {
 			break
 		}
 	}

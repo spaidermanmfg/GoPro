@@ -3,19 +3,17 @@ package main
 
 import "fmt"
 
-
 /*
 1.直接传递
 是一个拷贝，在函数内部不会修改外部结构体的内容
 2.使用指针传递
-传递结构体指针，在函数内部可以修改外部结构体的内容 
+传递结构体指针，在函数内部可以修改外部结构体的内容
 */
 
-
 type Book struct {
-	title string
+	title  string
 	author string
-	page int
+	page   int
 	bookid int
 }
 
@@ -37,7 +35,7 @@ func showBooks(book *Book) {
 }
 
 func mainpa() {
-	book := Book {
+	book := Book{
 		"《Samll King》",
 		"Edition",
 		222,
@@ -49,9 +47,9 @@ func mainpa() {
 	fmt.Printf("book3: %v\n\n", book)
 
 	//值被修改
-	var per *Book = &book//per := &book
+	var per *Book = &book //per := &book
 	fmt.Printf("book4: %v\n", book)
 	showBooks(per)
 	fmt.Printf("book5: %v\n", per)
-	
+
 }

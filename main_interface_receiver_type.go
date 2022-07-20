@@ -10,7 +10,6 @@ type Pet interface {
 	eats(string) string
 }
 
-
 type Cat struct {
 	name string
 }
@@ -18,7 +17,7 @@ type Cat struct {
 //实现方法
 func (cat Cat) eats(food string) string {
 	cat.name = "miao"
-	fmt.Printf("%v eat %v\n", cat.name, food)//miao eat fish
+	fmt.Printf("%v eat %v\n", cat.name, food) //miao eat fish
 	return cat.name
 }
 
@@ -29,23 +28,21 @@ func (cat *Cat) eat(food string) string {
 	return cat.name
 }
 
-
-
 func main5() {
 	cat := Cat{
-		name : "kitty",
+		name: "kitty",
 	}
 	re := cat.eats("fish")
-	fmt.Printf("%v\n", re)//miao
-	fmt.Printf("%v\n", cat)//kitty
+	fmt.Printf("%v\n", re)  //miao
+	fmt.Printf("%v\n", cat) //kitty
 
 	fmt.Println("-----------------")
 
 	cat1 := &Cat{
-		name : "kitty",
+		name: "kitty",
 	}
 	rs := cat1.eat("fish")
 	fmt.Printf("%v\n", rs)
-	fmt.Printf("%v\n", *cat1)//值被修改
-	
+	fmt.Printf("%v\n", *cat1) //值被修改
+
 }

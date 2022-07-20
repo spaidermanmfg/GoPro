@@ -1,4 +1,5 @@
 package main
+
 //break语句
 import (
 	"fmt"
@@ -37,7 +38,7 @@ func r2() {
 
 func r3() {
 	//break标签
-	MYSQLUU:
+MYSQLUU:
 
 	for i := 0; i <= 10; i++ {
 		fmt.Printf("%d\n", i)
@@ -49,7 +50,7 @@ func r3() {
 }
 
 func mainy() {
-	r1()	
+	r1()
 	r2()
 	r3()
 }

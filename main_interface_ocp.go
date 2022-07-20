@@ -1,6 +1,7 @@
 package main
 
 import "fmt"
+
 //Go接口实现ocp原则
 //ocp原则：开闭原则，对扩展开放，对修改关闭
 
@@ -45,17 +46,17 @@ func (person PERSON) care(pet PET) {
 }
 
 func main6() {
-	dog := DOG {
-		name : "旺财",
+	dog := DOG{
+		name: "旺财",
 	}
-	cat := CAT {
-		name : "猫咪",
+	cat := CAT{
+		name: "猫咪",
 	}
 
-	person := PERSON {
-		name : "翠翠",
+	person := PERSON{
+		name: "翠翠",
 	}
 
 	person.care(dog)
-	person.care(cat)	
+	person.care(cat)
 }

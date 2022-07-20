@@ -1,4 +1,5 @@
 package main
+
 //切片
 
 import "fmt"
@@ -18,9 +19,9 @@ func slice2() {
 	fmt.Printf("%T %v len(a)=%v cap(a)=%v\n", a, a, len(a), cap(a))
 }
 
-func slice3(){
+func slice3() {
 	//直接初始化切片
-	var a = []int{1,2,3,4,5,6}
+	var a = []int{1, 2, 3, 4, 5, 6}
 	fmt.Printf("%v\n", a)
 	//切片的切片,取0但不取3
 	b := a[0:3]
@@ -35,17 +36,16 @@ func slice3(){
 
 func slice4() {
 	//根据索引和长度遍历切片
-	var a = []int{1,2,3,4,5,6,7,8,9,0}
+	var a = []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 0}
 	length := len(a)
 	for i := 0; i < length; i++ {
 		fmt.Printf("a[%v]=%v\n", i, a[i])
 	}
 }
 
-
 func slice5() {
 	//通过for range遍历切片
-	var a = []int{1,2,4,5,6,7,8,9,0}
+	var a = []int{1, 2, 4, 5, 6, 7, 8, 9, 0}
 	for i, v := range a {
 		fmt.Printf("a[%v]=%v\n", i, v)
 	}
@@ -65,7 +65,7 @@ func slice6() {
 //del
 func slice7() {
 	//删除切片中的元素
-	var a = []int{1,2,3,4,5,6,7,8,9,0}
+	var a = []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 0}
 	//删除第一个元素
 	a = append(a[:0], a[1:]...)
 	fmt.Printf("a: %v\n", a)
@@ -80,7 +80,7 @@ func slice7() {
 //update
 func slice8() {
 	//更新切片中的元素
-	var a = []int{1,2,3,4,5,6,7,8,9}
+	var a = []int{1, 2, 3, 4, 5, 6, 7, 8, 9}
 	a[4] = 1000
 	fmt.Printf("a: %v\n", a)
 }
@@ -88,7 +88,7 @@ func slice8() {
 //query
 func slice9() {
 	//查询切片中的元素
-	var a = []int{1,2,3,4,5,6,7,8,9,0}
+	var a = []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 0}
 	key := 4
 	for i, v := range a {
 		if i == key {
@@ -100,7 +100,7 @@ func slice9() {
 //赋值切片
 func slice10() {
 	//赋值切片会赋值切片的地址，修改其中一个切片，另一个切片也会被修改
-	var a = []int{1,2,3,4,5}
+	var a = []int{1, 2, 3, 4, 5}
 	var b = a
 	fmt.Printf("a: %v\n", a)
 	fmt.Printf("b: %v\n", b)
@@ -112,11 +112,11 @@ func slice10() {
 
 //使用copy(目标切片，源切片)函数复制切片
 func slice11() {
-	var a = []int{1,2,3,4,5,6}
+	var a = []int{1, 2, 3, 4, 5, 6}
 	var b = make([]int, len(a))
 	copy(b, a)
 	fmt.Printf("a: %v\n", a)
-	fmt.Printf("b: %v\n", b)	
+	fmt.Printf("b: %v\n", b)
 }
 
 func mainss() {

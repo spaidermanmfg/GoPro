@@ -1,6 +1,5 @@
 package main
 
-
 import (
 	"fmt"
 	"sync"
@@ -19,18 +18,17 @@ var wc sync.WaitGroup
 
 var lock sync.Mutex
 
-
 func aDD() {
 	defer wc.Done()
-	lock.Lock()//加锁
+	lock.Lock() //加锁
 	k += 1
 	fmt.Println("i++ = ", k)
 	time.Sleep(time.Millisecond * 10)
-	lock.Unlock()//解锁
+	lock.Unlock() //解锁
 }
 
 func sUB() {
-	lock.Lock()//加锁时其他进程不能进来，只有当程序执行完成解锁后其他线程才能加入进来
+	lock.Lock() //加锁时其他进程不能进来，只有当程序执行完成解锁后其他线程才能加入进来
 	time.Sleep(time.Millisecond * 2)
 	defer wc.Done()
 	k -= 1
@@ -49,5 +47,5 @@ func main66() {
 	wc.Wait()
 
 	fmt.Println("end...", k)
-	
+
 }

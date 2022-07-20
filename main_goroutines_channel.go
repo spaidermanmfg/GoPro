@@ -1,12 +1,13 @@
 package main
+
 import (
 	"fmt"
-	"time"
 	"math/rand"
+	"time"
 )
 
 //channel管道
-/* 
+/*
 通道被设计用于在goroutines之间传递数据或资源。
 声明通道需要指定数据类型
 数据在通道上传递，在指定时间内只有一个goroutine可以接收或发送数据,因此不会发生冲突。
@@ -37,4 +38,4 @@ func main10() {
 	fmt.Printf("receive: %v\n", value)
 	fmt.Println("end...")
 }
- */
+*/

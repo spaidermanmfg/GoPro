@@ -1,9 +1,10 @@
 package main
 
 import "fmt"
+
 //init函数
 
-/* 
+/*
 实现包级别的一些初始化操作
 
 1. init函数先于main函数自动执行
@@ -12,7 +13,7 @@ import "fmt"
 4. init函数不可以被调用
 
 执行顺序：
-	初始化变量 > 初始化函数 > main函数  
+	初始化变量 > 初始化函数 > main函数
 */
 
 var i int = initVar()
@@ -26,7 +27,6 @@ func init() {
 	fmt.Println("init...")
 }
 
-
 func mainIn() {
-	fmt.Println("main...")	
+	fmt.Println("main...")
 }

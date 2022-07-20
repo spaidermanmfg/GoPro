@@ -1,9 +1,11 @@
 package main
-import(
+
+import (
 	"fmt"
-	"unsafe"
 	"math"
+	"unsafe"
 )
+
 //数字类型
 
 func maink() {
@@ -32,11 +34,10 @@ func maink() {
 	fmt.Printf("%T %dB %v~%v\n", f32, unsafe.Sizeof(f32), math.SmallestNonzeroFloat32, math.MaxFloat32)
 	fmt.Printf("%T %dB %v~%v\n", f64, unsafe.Sizeof(f64), math.SmallestNonzeroFloat64, math.MaxFloat64)
 
-
 	//进制
 	var a int = 10
-	fmt.Printf("%d\n", a)//十进制
-	fmt.Printf("%b\n", a)//二进制
-	fmt.Printf("%o\n", a)//八进制
-	fmt.Printf("%x\n", a)//十六进制
+	fmt.Printf("%d\n", a) //十进制
+	fmt.Printf("%b\n", a) //二进制
+	fmt.Printf("%o\n", a) //八进制
+	fmt.Printf("%x\n", a) //十六进制
 }

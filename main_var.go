@@ -2,10 +2,10 @@ package main
 
 //调用包
 import (
-	"fmt"
 	"GoPro/user"
+	"fmt"
 )
- 
+
 //Go声明变量
 func mains() {
 	s := user.Hello()
@@ -25,5 +25,5 @@ func mains() {
 	fmt.Printf("age: %v\n", age)
 	fmt.Printf("height: %v\n", height)
 	fmt.Printf("polo: %v\n", polo)
-	
+
 }

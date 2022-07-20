@@ -1,25 +1,27 @@
 package main
+
 import (
 	"fmt"
 	"time"
 )
-/* 
+
+/*
 Ticker  周期执行
 
 */
 func main() {
-	ticker := time.NewTicker(time.Second * 3)//每隔3秒钟
-/* 
-	counter := 1
-	for _ = range ticker.C {
-		fmt.Println("codeing...")
-		counter++//设置停止条件
-		fmt.Println(counter)s
-		if counter > 10 {
-			ticker.Stop()
-			break
-		}
-	} */
+	ticker := time.NewTicker(time.Second * 3) //每隔3秒钟
+	/*
+		counter := 1
+		for _ = range ticker.C {
+			fmt.Println("codeing...")
+			counter++//设置停止条件
+			fmt.Println(counter)s
+			if counter > 10 {
+				ticker.Stop()
+				break
+			}
+		} */
 
 	chanINT := make(chan int)
 	go func() {
@@ -32,7 +34,6 @@ func main() {
 		}
 	}()
 
-
 	sum := 0
 	for v := range chanINT {
 		fmt.Println("copy ", v)
@@ -41,6 +42,5 @@ func main() {
 			break
 		}
 	}
-		
-	
+
 }

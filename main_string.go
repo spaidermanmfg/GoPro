@@ -1,9 +1,11 @@
 package main
+
 import (
-	"strings"
-	"fmt"
 	"bytes"
+	"fmt"
+	"strings"
 )
+
 //字符串类型
 
 func mainc() {
@@ -37,7 +39,7 @@ func mainc() {
 	//使用bytes.buffer方法连接字符串
 	var e0 = "hello"
 	var e1 = "world"
-	var buffer = bytes.Buffer{}//var buffer bytes.Buffer
+	var buffer = bytes.Buffer{} //var buffer bytes.Buffer
 	buffer.WriteString(e0)
 	buffer.WriteString(",")
 	buffer.WriteString(e1)
@@ -51,9 +53,9 @@ func mainc() {
 	var f4 = 5
 	fmt.Printf("%T %s\n", f1, f1)
 	fmt.Printf("%T %s\n", f2, f2)
-	fmt.Printf("%v %c\n", f0[f3], f0[f3])//取第二位字符
-	fmt.Printf("%s %s\n", f0[f3:f4], f0[f3:f4])//取第二位到第五位字符
-	fmt.Printf("%s\n", f0[f3:])//从第二位取到最后一位字符
+	fmt.Printf("%v %c\n", f0[f3], f0[f3])       //取第二位字符
+	fmt.Printf("%s %s\n", f0[f3:f4], f0[f3:f4]) //取第二位到第五位字符
+	fmt.Printf("%s\n", f0[f3:])                 //从第二位取到最后一位字符
 	//字符串函数
 	//字符串长度
 	fmt.Printf("%T %d\n", len(f0), len(f0))
@@ -75,10 +77,5 @@ func mainc() {
 	fmt.Printf("%T %v\n", strings.LastIndex(f0, "o"), strings.LastIndex(f0, "o"))
 	//替换字符串
 	fmt.Printf("%T %v\n", strings.Replace(f0, "o", "K", -1), strings.Replace(f0, "o", "K", -1))
-	
-
-	
-	
-
 
 }

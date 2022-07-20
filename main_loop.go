@@ -1,24 +1,25 @@
 package main
+
 //for循环
 
 import (
 	"fmt"
 )
 
-func m1() {	
-		//for结构体
-	
-		for i := 0; i <= 10; i++ {
-			fmt.Printf("%d\n", i)
-		}
+func m1() {
+	//for结构体
+
+	for i := 0; i <= 10; i++ {
+		fmt.Printf("%d\n", i)
+	}
 }
 
 func m2() {
 	//初始语句和结束语句都可以省略，初始语句可以写在循环体外部
-	i := 0//初始语句
+	i := 0 //初始语句
 	for i <= 10 {
 		fmt.Printf("%d\n", i)
-		i++//结束语句
+		i++ //结束语句
 	}
 }
 
@@ -29,14 +30,14 @@ func m3() {
 }
 
 func m4() {
-	/* 
-	Go可以使用for range循环遍历数组，map，切片，字符串，通道
-	数组、切片、字符串返回索引和数值
-	map返回键和值
-	通道返回值和索引
-	 */
+	/*
+		Go可以使用for range循环遍历数组，map，切片，字符串，通道
+		数组、切片、字符串返回索引和数值
+		map返回键和值
+		通道返回值和索引
+	*/
 
-	 //
+	//
 
 	//数组
 	var arr [5]int = [5]int{1, 2, 3, 4, 5}
@@ -75,7 +76,7 @@ func LoopArray() {
 	var a = [5]int{6, 2, 9, 3, 5}
 	//i为索引，v为数组元素,不使用索引可以使用_代替
 	for i, v := range a {
-		fmt.Printf("a[%d] = %d\n", i , v)
+		fmt.Printf("a[%d] = %d\n", i, v)
 	}
 }
 
@@ -109,13 +110,12 @@ func LoopString() {
 	}
 }
 
-
 func maint() {
-	/* 
-	for 初始语句; 条件表达式; 循环语句 {
-		//循环体语句
-	}
-	 */
+	/*
+		for 初始语句; 条件表达式; 循环语句 {
+			//循环体语句
+		}
+	*/
 
 	//m1()
 	//m2()

@@ -1,7 +1,8 @@
 package main
+
 import "fmt"
 
-/* 
+/*
 闭包
 */
 
@@ -22,7 +23,7 @@ func suffix(suffix string) func(string) string {
 }
 
 //闭包示例3
-func callfun(base int) (func(int) int, func(int) int){
+func callfun(base int) (func(int) int, func(int) int) {
 	add := func(x int) int {
 		return base + x
 	}
@@ -32,7 +33,6 @@ func callfun(base int) (func(int) int, func(int) int){
 	}
 	return add, sub
 }
-
 
 func mainkk() {
 	//在ff的生命周期内，x一直有效

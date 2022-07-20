@@ -1,5 +1,6 @@
 package main
-import(
+
+import (
 	"fmt"
 )
 
@@ -10,11 +11,11 @@ func mainn() {
 	var b int = 5
 
 	//算术运算符
-	fmt.Printf("a + b = %d\n", a + b)
-	fmt.Printf("a - b = %d\n", a - b)
-	fmt.Printf("a * b = %d\n", a * b)
-	fmt.Printf("a / b = %d\n", a / b)
-	fmt.Printf("a mod b = %d\n", a % b)
+	fmt.Printf("a + b = %d\n", a+b)
+	fmt.Printf("a - b = %d\n", a-b)
+	fmt.Printf("a * b = %d\n", a*b)
+	fmt.Printf("a / b = %d\n", a/b)
+	fmt.Printf("a mod b = %d\n", a%b)
 
 	//Go语言中++、--不能用作表达式中
 	a++
@@ -47,22 +48,21 @@ func mainn() {
 	judge = !flag1
 	fmt.Printf("!flag1 为 %t\n\n", judge)
 
-
 	//位运算符
-	var c int = 4//0100
-	var d int = 8//1000
+	var c int = 4 //0100
+	var d int = 8 //1000
 
 	fmt.Printf("c = %b \nd = %b\n", c, d)
 	result := c & d
-	fmt.Printf("c & d = %b\n", result)//两个都为1的位置为1，否则为0
-	result =  c | d
-	fmt.Printf("c | d = %b\n", result)//有一个位置为1，则为1，否则为0
+	fmt.Printf("c & d = %b\n", result) //两个都为1的位置为1，否则为0
+	result = c | d
+	fmt.Printf("c | d = %b\n", result) //有一个位置为1，则为1，否则为0
 	result = c ^ d
-	fmt.Printf("c ^ d = %b\n", result)//两个位置不同为1，否则为0
+	fmt.Printf("c ^ d = %b\n", result) //两个位置不同为1，否则为0
 	result = c << 2
-	fmt.Printf("c << 2 = %b\n", result)//左移2位
+	fmt.Printf("c << 2 = %b\n", result) //左移2位
 	result = c >> 2
-	fmt.Printf("c >> 2 = %b\n\n", result)//右移2位
+	fmt.Printf("c >> 2 = %b\n\n", result) //右移2位
 
 	//赋值运算符
 	a += 100

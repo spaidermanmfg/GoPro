@@ -1,4 +1,5 @@
 package main
+
 //continue关键字
 
 import (
@@ -8,9 +9,9 @@ import (
 func g1() {
 	fmt.Println()
 	for i := 0; i <= 10; i++ {
-		if i % 2 == 0 {
+		if i%2 == 0 {
 			fmt.Printf("%d\n", i)
-		}else {
+		} else {
 			continue
 		}
 	}
@@ -18,7 +19,7 @@ func g1() {
 
 func g2() {
 	for i := 0; i <= 10; i++ {
-		END:
+	END:
 		for j := 0; j <= 10; j++ {
 			fmt.Printf("%d , %d\n", i, j)
 			if i == 6 && j == 6 {

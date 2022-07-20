@@ -1,5 +1,6 @@
 //类型定义
 package main
+
 import "fmt"
 
 /*
@@ -15,14 +16,14 @@ func typeDefine() {
 	//类型定义
 	type myInt int
 	var a myInt = 1
-	fmt.Printf("%T , %v\n", a, a)//main.myInt , 1
+	fmt.Printf("%T , %v\n", a, a) //main.myInt , 1
 }
 
 func typeOtherName() {
 	//类型别名
 	type myInt = int
 	var a myInt = 1
-	fmt.Printf("%T , %v\n", a, a)//int , 1
+	fmt.Printf("%T , %v\n", a, a) //int , 1
 
 }
 

@@ -27,16 +27,16 @@ func main() {
 
 	}()
 
-	for{
+	for {
 		select {
 		case r := <-chansInt:
-			fmt.Println("chansInt",r)
+			fmt.Println("chansInt", r)
 		case r := <-chansStr:
-			fmt.Println("chansStr",r)
+			fmt.Println("chansStr", r)
 		default:
 			fmt.Println("default...")
 		}
 		time.Sleep(time.Second)
 	}
-	
+
 }
